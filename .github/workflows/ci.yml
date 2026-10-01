@@ -1,11 +1,15 @@
-name: CI Workflow
+name: Day 18 Starter CI
+
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
 jobs:
-  build:
+  hello:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - run: echo "Hello CI! ✅"
+      - run: echo "Hello from Day 18 CI!"
